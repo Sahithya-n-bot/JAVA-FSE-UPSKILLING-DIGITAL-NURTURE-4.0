@@ -1,200 +1,309 @@
 < ------ Exercise 1 ----- >
-
 HTML (index.html):
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Community Event</title>
-  <!-- Embedded CSS -->
-  <style>
-    body {
-      background-color: #f0f0f0;
-    }
-  </style>
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
+    <title>Community Event</title>
+    <!-- Embedded CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Community Event Website">
+    <meta name="keywords" content="community, event, local">
 </head>
 <body>
-  <h1 style="color: red;">Welcome to Our Local Events!</h1> <!-- Inline style -->
-  <h2 id="mainHeader">Upcoming Events</h2>
-  <div class="eventCard">...</div>
+    <h1 style="color: red;">Welcome to Our Local Events!</h1>
+    <!-- Inline style -->
+    <h2 id="mainHeader">Upcoming Events</h2>
+    <h3>Don't miss out on these exciting events!</h3>
+    <div class="eventCard">...</div>
+    <div class="futureEvents"></div>
 </body>
 </html>
+
+
 External CSS (styles.css):
+
 /* Header styles */
 #mainHeader {
-  font-size: 24px;
-  color: navy;
+    font-size: 24px;
+    color: navy;
+    text-align: center;
 }
+
 /* Card styles */
 .eventCard {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 10px;
-  background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.futureEvents {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
 }
 
 < ----- Exercise 2 ----- >
+
 /* Style for main CTA button */
 .cta-button {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
 
 < ----- Exercise 3 ----- >
+
 /* Reset margin and padding */
 * {
-  margin: 0;
-  padding: 0;
-}
-/* Style all h2 elements */
-h2 {
-  color: teal;
-  margin-bottom: 10px;
-}
-/* ID selector */
-#mainHeader {
-  font-size: 28px;
-  font-weight: bold;
-}
-/* Class selector */
-.eventCard {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 15px;
-}
-/* Grouping selector */
-h3, p {
-  font-family: Arial, sans-serif;
-  color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Style all h2 elements */
+h2 {
+    color: teal;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* ID selector */
+#mainHeader {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Class selector */
+.eventCard {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Grouping selector */
+h3, p {
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 16px;
+}
+
+
 < ----- Exercise 4 ------ >
+
 /* Text color using HEX */
 h1 {
-  color: #004488;
+    color: #004488;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+
 /* Background using RGBA */
 body {
-  background-color: rgba(240, 240, 255, 0.9);
+    background-color: rgba(240, 240, 255, 0.9);
+    font-family: Arial, sans-serif;
 }
+
 /* Background image with fallback */
 body {
-  background-color: #eee;
-  background-image: url('background.jpg');
-  background-size: cover;
+    background-color: #eee;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
+
 /* Gradient on section headers */
 section h2 {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
-  padding: 10px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 < ----- exercise 5 ----- >
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
+
 p.description {
-  font-size: 1.1em;
-  text-align: justify;
-  letter-spacing: 0.5px;
-  text-transform: none;
+    font-size: 1.1em;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    color: #444;
+    word-spacing: 1px;
 }
+
 
 < ----- Exercise 6 ----- >
+
 nav a:link {
-  color: #0077cc;
-}
-nav a:visited {
-  color: purple;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-nav a:active {
-  color: red;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-nav li {
-  margin: 5px 0;
+    color: #0077cc;
+    text-decoration: none;
 }
 
+nav a:visited {
+    color: purple;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #0055aa;
+}
+
+nav a:active {
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+
 < ----- Exercise 7 ----- >
+
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
+
 th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
 }
+
 tr:nth-child(even) {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
 }
 
 < ----- Exercise 8 ----- >
+
 .eventCard {
-  border: 1px solid #ddd;
-  margin: 20px;
-  padding: 15px;
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 /* Outline example */
 input:focus {
-  outline: 2px solid #007BFF;
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
 }
+
 /* Visibility comparison */
 .hidden {
-  visibility: hidden;
+    visibility: hidden;
 }
+
 .not-displayed {
-  display: none;
+    display: none;
+}
+
+.collapsed {
+    height: 0;
+    overflow: hidden;
 }
 
 < ----- Exercise 9 ----- >
+
 .news-section {
-  column-count: 2;
-  column-gap: 30px;
-  column-rule: 1px solid gray;
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    padding: 20px;
+    text-align: justify;
+}
+
+.news-section h2 {
+    column-span: all;
+    margin-top: 0;
 }
 
 < ----- Exercise 10 ----- >
+
+
 /* Base styles */
 nav ul {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
 }
+
 /* Responsive styles */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  img {
-    width: 100%;
-    height: auto;
-  }
-  body {
-    font-size: 14px;
-  }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    body {
+        font-size: 14px;
+    }
 }
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
 /* Use flexible units */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
+
 
 < ----- Exercise 11 ----- >
 /* Nothing required in code; use DevTools to: */
